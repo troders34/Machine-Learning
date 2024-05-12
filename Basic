@@ -1,0 +1,24 @@
+# Machine Learning Codes in Progress...
+# ...
+# ...
+# ...
+# This code is a work done in Google Colab. So, anyone who is willing to use it, I suggest you to paste it on your own Google Colab.
+# ...
+import os
+os.listdir('sample_data')
+import pandas as pd
+# converting csv file into a readable dataframe
+df = pd.read_csv('sample_data/california_housing_train.csv')
+df.head()
+# MinMaxScaler as a normalisation library
+from sklearn.preprocessing import MinMaxScaler
+data = [[12000000, 33], [35000000, 45], [4000000, 23], [6500000, 26], [9000000, 29]]
+scaler = MinMaxScaler()
+scaler.fit(data)
+print(scaler.transform(data))
+# step to do standarisation
+from sklearn import preprocessing
+data = [[12000000, 33], [35000000, 45], [4000000, 23], [6500000, 26], [9000000, 29]]
+scaler = preprocessing.StandardScaler().fit(data)
+data = scaler.transform(data)
+data
